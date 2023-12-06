@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import Products from './components/ProductsList';
 
 function App() {
+  function doSomething(data)
+  {
+    console.log("Hello! I am Clicked"+data);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome Everyone</h1>
+      <Header></Header>
+      <Products></Products>
+      {/* <button className='btn' onClick={doSomething}>Click</button> */}
+      <button className='btn' onClick={()=>{doSomething("Jishnu")}}>Click</button>
     </div>
   );
 }
